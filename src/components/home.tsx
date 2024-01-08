@@ -1,10 +1,10 @@
-'use client'
-import Image from 'next/image'
-import Balance from 'react-wrap-balancer'
-import { HeroPattern } from '@/components/HeroPattern'
+"use client"
+import Image from "next/image"
+import Balance from "react-wrap-balancer"
+import { HeroPattern } from "@/components/HeroPattern"
 
-import { AnalyticsButton } from '@/components/analytics-button'
-import { motion } from 'framer-motion'
+import { AnalyticsButton } from "@/components/analytics-button"
+import { motion } from "framer-motion"
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
 
       <p className="px-4 text-center text-lg font-normal leading-7 tracking-tight text-zinc-400">
         <Balance>
-          Somos especialistas em análise do mercado esportivo, com foco em{' '}
+          Somos especialistas em análise do mercado esportivo, com foco em{" "}
           <strong>FIFA e NBA2K</strong> . Temos uma <strong>IA</strong> que
           realiza as análises do mercado, envia tips no Telegram e executa
           automaticamente apostas na <strong>BET</strong>, oferecendo um serviço

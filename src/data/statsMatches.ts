@@ -1,5 +1,5 @@
-import { api } from './api'
-import { dataStats } from './types/dataStats'
+import { api } from "./api"
+import { dataStats } from "./types/dataStats"
 
 export async function statsMatches(query: string): Promise<dataStats[]> {
   const response = await api(`/league/live?sport=${query}`)
