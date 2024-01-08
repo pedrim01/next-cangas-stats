@@ -12,7 +12,7 @@ interface AnalyticsButtonProps {
 // type AnalyticsButtonDivProps = ComponentProps<'div'>
 
 export function AnalyticsButton({
-  className,
+  className = 'bg-cangas-green',
   target,
   textButton,
   route,
@@ -21,7 +21,7 @@ export function AnalyticsButton({
     <Link
       target={target}
       href={route}
-      className={`${className} duration-400 flex items-center justify-center rounded-md bg-cangas-green 
+      className={`${className} duration-400 flex items-center justify-center rounded-md 
       px-4 py-2 font-semibold text-zinc-300 transition ease-in-out 
       hover:text-zinc-50 sm:text-base`}
     >
