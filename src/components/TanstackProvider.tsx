@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { QueryClient, QueryClientProvider } from "react-query"
-import { ReactNode } from "react"
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { ReactNode } from 'react'
 // import { ReactQueryDevtools } from 'react-query/devtools'
 const queryClient = new QueryClient()
 

@@ -1,4 +1,4 @@
-"use client"
+'use client'
 /* eslint-disable prettier/prettier */
 import { TrendingUp } from "lucide-react";
 
@@ -12,47 +12,48 @@ import { Arrow } from "./arrow";
 
 interface CardLiveFifaH2hProps {
   playerA: string;
-  teamA?: string
+  teamA?: string;
   playerB: string;
-  teamB?:string
+  teamB?: string;
 }
 
-
-
-export function CardLiveFifaH2h({ playerA,teamA, playerB,teamB }: CardLiveFifaH2hProps) {
+export function CardLiveFifaH2h({
+  playerA,
+  teamA,
+  playerB,
+  teamB,
+}: CardLiveFifaH2hProps) {
   const {
     data: dataH2hStats,
     isFetchedAfterMount,
     error,
   } = useQuery<dataH2hStats>("h2hstats", async () => {
-    const { data } = !teamA ? await apiAxiosBackend.get(
-      `/live/fifa/${playerA}/${playerB}`,
-    ) : await apiAxiosBackend.get(
-      `/live/fifa/${playerA}/${teamA}/${playerB}/${teamB}`,
-    ) ;
+    const { data } = !teamA
+      ? await apiAxiosBackend.get(`/live/fifa/${playerA}/${playerB}`)
+      : await apiAxiosBackend.get(
+          `/live/fifa/${playerA}/${teamA}/${playerB}/${teamB}`,
+        );
 
     return data;
   });
 
-  
-
-    // console.log({ 
-    //   errorUpdatedAt,
-    //   failureCount,
-    //   isError,
-    //   isFetched,
-    //   isFetchedAfterMount,
-    //   isFetching,
-    //   isLoading,
-    //   isLoadingError,
-    //   isPlaceholderData,
-    //   isPreviousData,
-    //   isRefetchError,
-    //   isStale,
-    //   isSuccess,
-    //   refetch,
-    //   remove,
-    //   status });
+  // console.log({
+  //   errorUpdatedAt,
+  //   failureCount,
+  //   isError,
+  //   isFetched,
+  //   isFetchedAfterMount,
+  //   isFetching,
+  //   isLoading,
+  //   isLoadingError,
+  //   isPlaceholderData,
+  //   isPreviousData,
+  //   isRefetchError,
+  //   isStale,
+  //   isSuccess,
+  //   refetch,
+  //   remove,
+  //   status });
 
   if (error) {
     return null;
@@ -61,86 +62,70 @@ export function CardLiveFifaH2h({ playerA,teamA, playerB,teamB }: CardLiveFifaH2
   if (isFetchedAfterMount) {
     return (
       <>
-        <div className="col-span-2 grid grid-cols-h2h grid-rows-app items-center justify-items-stretch gap-4 sm:gap-6 rounded-lg bg-zinc-900 px-10 py-6">
+        <div className="col-span-2 grid grid-cols-h2h grid-rows-app items-center justify-items-stretch gap-4 rounded-lg bg-zinc-900 px-10 py-6 sm:gap-6">
           <span className="justify-self-end sm:text-xl/5">Player 1</span>
 
           <span />
 
           <span className="sm:text-xl/5">Player 2</span>
 
-          <div className="flex flex-col items-end justify-center space-y-1 text-lg sm:text-3xl text-rose-500">
+          <div className="flex flex-col items-end justify-center space-y-1 text-lg text-rose-500 sm:text-3xl">
             <span className=" font-medium">
               {dataH2hStats?.game_mutual_information?.jogadorB_name}
             </span>
 
             {/* Nullish coalescing operator ?? => null or undefined */}
-            <span>{decodeURI(teamA ?? '')}</span> 
+            <span>{decodeURI(teamA ?? "")}</span>
           </div>
 
           <span className="text-xl/8 font-semibold">VS</span>
 
-          <div className="flex flex-col items-start justify-center space-y-1 text-lg sm:text-3xl text-purple-500">
+          <div className="flex flex-col items-start justify-center space-y-1 text-lg text-purple-500 sm:text-3xl">
             <span className="font-medium">
               {dataH2hStats?.game_mutual_information?.jogadorA_name}
             </span>
 
-            <span>{decodeURI(teamB ?? '')}</span>
+            <span>{decodeURI(teamB ?? "")}</span>
           </div>
 
           <div className="relative space-y-2 justify-self-end">
+            <Arrow className="absolute left-2 h-4 max-w-[100px]" />
 
-            
-          <Arrow className="absolute left-2 max-w-[100px] h-4"   />
-
-            <div className="flex flex-row-reverse min-w-[110px] flex-wrap justify-end gap-2">
-
-            {
-              dataH2hStats?.jogadorB?.games?.map((data,index:number) => {
-                if(index>4) return null
-              return (
-                <TooltipMatches 
-                  key={data.timestamp} 
-                  name = {dataH2hStats?.jogadorB?.name}
-                  dataMatch = {data}
-                
-                />
-              ) 
-              })
-            }
+            <div className="flex min-w-[110px] flex-row-reverse flex-wrap justify-end gap-2">
+              {dataH2hStats?.jogadorB?.games?.map((data, index: number) => {
+                if (index > 4) return null;
+                return (
+                  <TooltipMatches
+                    key={data.timestamp}
+                    name={dataH2hStats?.jogadorB?.name}
+                    dataMatch={data}
+                  />
+                );
+              })}
             </div>
-
           </div>
 
           <span />
-          
-          <div className="space-y-2 justify-self-start">
 
-            
-            <Arrow className="rotate-180 max-w-[100px] h-4"   />
+          <div className="space-y-2 justify-self-start">
+            <Arrow className="h-4 max-w-[100px] rotate-180" />
 
             <div className="flex min-w-[110px] flex-wrap justify-start gap-2">
-          
-          {
-              dataH2hStats?.jogadorA?.games?.map((data,index:number) => {
-                if(index>4) return null
-              return (
-                <TooltipMatches 
-                  key={data.timestamp} 
-                  name = {dataH2hStats?.jogadorA?.name}
-                  dataMatch = {data}
-                
-                />
-              ) 
-              })
-            }
+              {dataH2hStats?.jogadorA?.games?.map((data, index: number) => {
+                if (index > 4) return null;
+                return (
+                  <TooltipMatches
+                    key={data.timestamp}
+                    name={dataH2hStats?.jogadorA?.name}
+                    dataMatch={data}
+                  />
+                );
+              })}
+            </div>
           </div>
-
-          </div>
-
-          
         </div>
 
-        <div className="col-span-2 grid grid-cols-3 grid-rows-app items-center justify-items-center gap-2 rounded-lg bg-zinc-900 px-10 py-6 lg:px-64">
+        <div className="lg:px-64 col-span-2 grid grid-cols-3 grid-rows-app items-center justify-items-center gap-2 rounded-lg bg-zinc-900 px-10 py-6">
           <h1 className="col-span-3 text-xl/5">
             {" "}
             Nº de Jogos:{" "}
@@ -170,25 +155,23 @@ export function CardLiveFifaH2h({ playerA,teamA, playerB,teamB }: CardLiveFifaH2
           <span className="text-3xl/5 text-purple-500">
             {dataH2hStats?.total_info?.game_mutual_information?.jogadorA_wins}
           </span>
-          
-          <Arrow className={`col-span-3 max-w-[calc(20_*_2_*_15px)] h-6`} />
 
+          <Arrow className={`col-span-3 h-6 max-w-[calc(20_*_2_*_15px)]`} />
 
-          <div className="col-span-3  flex flex-row-reverse min-w-[192px] flex-wrap justify-center gap-2">
-          {
-              dataH2hStats?.total_info?.last_games?.map((data,index:number) => {
-                if(index>19) return null
-              return (
-                <TooltipMatchesH2h 
-                  key={data.timestamp} 
-                  dataMatch = {data}
-                  player1 = {dataH2hStats.jogadorB?.name}
-                  player2 = {dataH2hStats.jogadorA?.name}
-                
-                />
-              ) 
-              })
-            }
+          <div className="col-span-3  flex min-w-[192px] flex-row-reverse flex-wrap justify-center gap-2">
+            {dataH2hStats?.total_info?.last_games?.map(
+              (data, index: number) => {
+                if (index > 19) return null;
+                return (
+                  <TooltipMatchesH2h
+                    key={data.timestamp}
+                    dataMatch={data}
+                    player1={dataH2hStats.jogadorB?.name}
+                    player2={dataH2hStats.jogadorA?.name}
+                  />
+                );
+              },
+            )}
           </div>
 
           <div className="col-span-3 grid w-full grid-cols-1 grid-rows-app items-center justify-items-stretch  gap-4 py-8 sm:grid-cols-2 sm:pl-32">

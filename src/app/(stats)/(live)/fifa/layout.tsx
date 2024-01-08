@@ -1,5 +1,5 @@
-import { ReactNode } from "react"
-import { Header } from "@/components/header"
+import { ReactNode } from 'react'
+import { Header } from '@/components/header'
 
 export default function StatsLayout({ children }: { children: ReactNode }) {
   return (

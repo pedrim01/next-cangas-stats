@@ -1,8 +1,8 @@
-import { CardLiveFifaH2h } from "@/components/card-live-fifa-h2h"
-import { Metadata } from "next"
+import { CardLiveFifaH2h } from '@/components/card-live-fifa-h2h'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Confronto",
+  title: 'Confronto',
 }
 
 export default async function H2h({ params }: { params: { players: string } }) {

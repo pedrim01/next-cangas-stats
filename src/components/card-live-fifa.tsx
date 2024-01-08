@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import Image from "next/image"
+import Image from 'next/image'
 
 import {
   Loader2,
@@ -8,13 +8,13 @@ import {
   CircleDot,
   ChevronRight,
   ChevronsRight,
-} from "lucide-react"
-import { AnalyticsButton } from "@/components/analytics-button"
+} from 'lucide-react'
+import { AnalyticsButton } from '@/components/analytics-button'
 
-import { useQuery } from "react-query"
-import { dataStats } from "@/data/types/dataStats"
-import { apiAxiosBackend } from "@/data/axiosCreates"
-import { TooltipRoot } from "./tooltip-matches"
+import { useQuery } from 'react-query'
+import { dataStats } from '@/data/types/dataStats'
+import { apiAxiosBackend } from '@/data/axiosCreates'
+import { TooltipRoot } from './tooltip-matches'
 
 export function CardLiveFifa() {
   const {
@@ -23,9 +23,9 @@ export function CardLiveFifa() {
     isFetching,
     error,
   } = useQuery<dataStats[]>(
-    "stats",
+    'stats',
     async () => {
-      const { data } = await apiAxiosBackend.get("/live/fifa")
+      const { data } = await apiAxiosBackend.get('/live/fifa')
 
       return data
     },
@@ -44,14 +44,14 @@ export function CardLiveFifa() {
 
   return stats?.map((stat) => {
     const onColorLeague = () => {
-      if (stat.league.includes("8")) {
-        return { bg: "bg-cyan-500", text: "text-cyan-700" }
-      } else if (stat.league.includes("10")) {
-        return { bg: "bg-lime-500", text: "text-lime-700" }
-      } else if (stat.league.includes("12")) {
-        return { bg: "bg-orange-400", text: "text-orange-400" }
+      if (stat.league.includes('8')) {
+        return { bg: 'bg-cyan-500', text: 'text-cyan-700' }
+      } else if (stat.league.includes('10')) {
+        return { bg: 'bg-lime-500', text: 'text-lime-700' }
+      } else if (stat.league.includes('12')) {
+        return { bg: 'bg-orange-400', text: 'text-orange-400' }
       } else {
-        return { bg: "bg-lime-500", text: "text-lime-700" }
+        return { bg: 'bg-lime-500', text: 'text-lime-700' }
       }
     }
 
@@ -80,7 +80,7 @@ export function CardLiveFifa() {
 
         <div className="flex flex-col items-center justify-center text-lg text-rose-500">
           <span>{stat.home_team_name}</span>
-          <span>{"(" + stat.home_player + ")"}</span>
+          <span>{'(' + stat.home_player + ')'}</span>
         </div>
 
         <span className="rounded-lg bg-zinc-950 px-4 py-2 text-xl font-semibold text-white sm:text-3xl">
@@ -89,7 +89,7 @@ export function CardLiveFifa() {
 
         <div className="flex flex-col items-center justify-center text-lg text-purple-500">
           <span>{stat.away_team_name}</span>
-          <span>{"(" + stat.away_player + ")"}</span>
+          <span>{'(' + stat.away_player + ')'}</span>
         </div>
 
         <div className="col-span-3 flex gap-4">
@@ -116,7 +116,7 @@ export function CardLiveFifa() {
 
         <div
           className={`${
-            stats.length === 0 ? "hidden opacity-0" : ""
+            stats.length === 0 ? 'hidden opacity-0' : ''
           } col-span-3 grid w-full grid-cols-3 grid-rows-app justify-items-center  gap-2`}
         >
           <span className={`col-span-3 ${onColorLeague().text}`}>
@@ -216,15 +216,15 @@ export function CardLiveFifa() {
           <div className="col-span-3 w-full border-b-2 border-zinc-800 p-1"></div>
 
           <span>
-            {stat.home_team_name} {"(" + stat.home_player + ")"}
+            {stat.home_team_name} {'(' + stat.home_player + ')'}
           </span>
 
           <span className={`${onColorLeague().text}`}>
-            {" "}
+            {' '}
             Handicap ({stat.odds?.ss})
           </span>
           <span>
-            {stat.away_team_name} {"(" + stat.away_player + ")"}
+            {stat.away_team_name} {'(' + stat.away_player + ')'}
           </span>
 
           <span>{stat.odds?.hc_home_line}</span>
