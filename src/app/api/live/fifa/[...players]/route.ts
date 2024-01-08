@@ -3,14 +3,14 @@
 import { apiAxios } from "@/data/axiosCreates";
 import { NextRequest } from "next/server";
 
-  type dataMatch =  {
-    home_player?: string
-    away_player?: string
-    winner_name?: string
-    score?: string
-    timestamp: number
-    dateConverted?: string
-}
+type dataMatch = {
+  home_player?: string;
+  away_player?: string;
+  winner_name?: string;
+  score?: string;
+  timestamp: number;
+  dateConverted?: string;
+};
 
 export async function GET(
   request: NextRequest,
@@ -43,22 +43,23 @@ export async function GET(
     (data.total_info.average_goals.jogadorA_goals +
       data.total_info.average_goals.jogadorB_goals) /
     data?.total_info?.game_mutual_information?.game_numbers;
-  
-    data.jogadorA.games = data?.jogadorA?.games?.map((item:dataMatch) => ({
+
+  data.jogadorA.games = data?.jogadorA?.games?.map((item: dataMatch) => ({
     ...item,
-    dateConverted: (new Date(item.timestamp * 1000)).toLocaleString()
-  }))
-    
-    data.jogadorB.games = data?.jogadorB?.games?.map((item:dataMatch) => ({
+    dateConverted: new Date(item.timestamp * 1000).toLocaleString(),
+  }));
+
+  data.jogadorB.games = data?.jogadorB?.games?.map((item: dataMatch) => ({
     ...item,
-    dateConverted: (new Date(item.timestamp * 1000)).toLocaleString()
-  }))
-    
-  data.total_info.last_games = data?.total_info?.last_games?.map((item:dataMatch) => ({
-    ...item,
-    dateConverted: (new Date(item.timestamp * 1000)).toLocaleString()
-  }))
-  
+    dateConverted: new Date(item.timestamp * 1000).toLocaleString(),
+  }));
+
+  data.total_info.last_games = data?.total_info?.last_games?.map(
+    (item: dataMatch) => ({
+      ...item,
+      dateConverted: new Date(item.timestamp * 1000).toLocaleString(),
+    }),
+  );
 
   return Response.json(data);
 }
