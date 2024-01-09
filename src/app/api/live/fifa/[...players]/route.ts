@@ -2,6 +2,7 @@
 /* eslint-disable prettier/prettier */
 import { apiAxios } from "@/data/axiosCreates";
 import { NextRequest } from "next/server";
+export const dynamic = 'force-dynamic' // defaults to auto
 
 type dataMatch = {
   home_player?: string;
