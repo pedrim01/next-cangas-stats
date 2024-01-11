@@ -9,7 +9,7 @@ export default async function H2h({ params }: { params: { players: string } }) {
   // await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return (
-    <div className="grid grid-cols-1 grid-rows-app gap-4 pt-12">
+    <div className="grid grid-cols-1 grid-rows-app gap-4 px-2 pt-12">
       {params.players.length === 2 ? (
         <CardLiveFifaH2h
           playerA={params.players[0]}

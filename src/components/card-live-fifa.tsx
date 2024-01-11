@@ -30,7 +30,7 @@ export function CardLiveFifa() {
       return data
     },
     {
-      refetchInterval: 1000 * 6, // 3 sec
+      refetchInterval: 1000 * 6, // 6 sec
     },
   )
 
@@ -78,7 +78,7 @@ export function CardLiveFifa() {
           {stat.minutes}:{stat.seconds}
         </span>
 
-        <div className="flex flex-col items-center justify-center text-lg text-rose-500">
+        <div className="flex flex-col items-center justify-self-end text-sm text-rose-500 sm:text-lg">
           <span>{stat.home_team_name}</span>
           <span>{'(' + stat.home_player + ')'}</span>
         </div>
@@ -87,7 +87,7 @@ export function CardLiveFifa() {
           {stat.score}
         </span>
 
-        <div className="flex flex-col items-center justify-center text-lg text-purple-500">
+        <div className="flex flex-col items-center justify-self-start text-sm text-purple-500 sm:text-lg">
           <span>{stat.away_team_name}</span>
           <span>{'(' + stat.away_player + ')'}</span>
         </div>
