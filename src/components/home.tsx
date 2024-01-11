@@ -23,7 +23,7 @@ export default function Home() {
       animate="visible"
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-      className="relative flex flex-col items-center justify-center gap-8 pt-2 sm:gap-3"
+      className="relative flex  flex-col items-center justify-center gap-8 pt-2 sm:gap-3"
     >
       <motion.div variants={itemVariants} className="absolute top-0">
         <Image
@@ -66,7 +66,7 @@ export default function Home() {
         </Balance>
       </motion.p>
 
-      <div className="flex w-96 flex-col gap-4">
+      <div className="flex max-w-96 flex-col gap-4">
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
