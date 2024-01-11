@@ -47,18 +47,18 @@ export async function GET(
 
   data.jogadorA.games = data?.jogadorA?.games?.map((item: dataMatch) => ({
     ...item,
-    dateConverted: new Date(item.timestamp * 1000).toLocaleString(),
+    dateConverted: new Date(item.timestamp * 1000).toLocaleDateString('pt-br')
   }));
 
   data.jogadorB.games = data?.jogadorB?.games?.map((item: dataMatch) => ({
     ...item,
-    dateConverted: new Date(item.timestamp * 1000).toLocaleString(),
+    dateConverted: new Date(item.timestamp * 1000).toLocaleDateString('pt-br'),
   }));
 
   data.total_info.last_games = data?.total_info?.last_games?.map(
     (item: dataMatch) => ({
       ...item,
-      dateConverted: new Date(item.timestamp * 1000).toLocaleString(),
+      dateConverted: new Date(item.timestamp * 1000).toLocaleDateString('pt-br'),
     }),
   );
 
