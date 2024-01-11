@@ -38,7 +38,7 @@ export default function Home() {
       <Link
         href="https://t.me/cangastips"
         target="_blank"
-        className="fixed bottom-4 right-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-tl from-cangas-green to-zinc-950 hover:text-zinc-50 "
+        className="z-100 fixed bottom-4 right-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-tl from-cangas-green to-zinc-950 hover:text-zinc-50 "
       >
         <TbMessageCircle2Filled className="text-4xl transition duration-200 hover:scale-110" />
       </Link>

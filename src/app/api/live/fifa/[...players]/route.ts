@@ -45,20 +45,26 @@ export async function GET(
       data.total_info.average_goals.jogadorB_goals) /
     data?.total_info?.game_mutual_information?.game_numbers;
 
+
+  const options = {
+      timeZone: 'America/Sao_Paulo', // Lista de Timezones no fim do artigo
+      hour12: false, // Alterna entre a mostragem dos horários em 24 horas, ou então AM/PM
+  }
+
   data.jogadorA.games = data?.jogadorA?.games?.map((item: dataMatch) => ({
     ...item,
-    dateConverted: new Date(item.timestamp * 1000).toLocaleDateString('pt-br')
+    dateConverted: new Date(item.timestamp * 1000).toLocaleString('pt-br', options)
   }));
 
   data.jogadorB.games = data?.jogadorB?.games?.map((item: dataMatch) => ({
     ...item,
-    dateConverted: new Date(item.timestamp * 1000).toLocaleDateString('pt-br'),
+    dateConverted: new Date(item.timestamp * 1000).toLocaleString('pt-br', options),
   }));
 
   data.total_info.last_games = data?.total_info?.last_games?.map(
     (item: dataMatch) => ({
       ...item,
-      dateConverted: new Date(item.timestamp * 1000).toLocaleDateString('pt-br'),
+      dateConverted: new Date(item.timestamp * 1000).toLocaleString('pt-br', options),
     }),
   );
 
