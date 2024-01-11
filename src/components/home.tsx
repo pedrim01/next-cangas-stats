@@ -143,7 +143,7 @@ export default function Home() {
           <AnalyticsButton
             textButton="Planilha de resultados (Broker)"
             target="_blank"
-            route={`https://t.me/cangastips`}
+            route={`https://docs.google.com/spreadsheets/d/149qEVZWFYA_UMUCZ9qmK7k1gPkMEtoEmBME1vL1HOps/edit#gid=0`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
