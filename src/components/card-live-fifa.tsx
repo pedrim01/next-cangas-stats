@@ -30,7 +30,7 @@ export function CardLiveFifa() {
       return data
     },
     {
-      refetchInterval: 1000 * 3, // 3 sec
+      refetchInterval: 1000 * 6, // 3 sec
     },
   )
 
