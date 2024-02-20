@@ -60,7 +60,7 @@ export default function Home() {
         <Balance>
           Somos especialistas em análise do mercado esportivo, com foco em{' '}
           <strong>FIFA e NBA2K</strong> . Temos uma <strong>IA</strong> que
-          realiza as análises do mercado, envia tips no Telegram e executa
+          realiza as análises do mercado, envia tips e executa
           automaticamente apostas na <strong>BET</strong>, oferecendo um serviço
           autônomo e independente para uma experiência confiável e única.
         </Balance>
