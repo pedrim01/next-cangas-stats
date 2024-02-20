@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
 interface HeroPatternProps {
-  className?: string;
+  className?: string
 }
 
 export function HeroPattern({ className }: HeroPatternProps) {
@@ -420,5 +420,5 @@ export function HeroPattern({ className }: HeroPatternProps) {
         </linearGradient>
       </defs>
     </svg>
-  );
+  )
 }

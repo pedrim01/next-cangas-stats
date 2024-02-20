@@ -1,18 +1,24 @@
 "use client";
+
 import Image from "next/image";
+
 import { TbMessageCircle2Filled } from "react-icons/tb";
 
 import Balance from "react-wrap-balancer";
+
 import { HeroPattern } from "@/components/HeroPattern";
 
 import { AnalyticsButton } from "@/components/analytics-button";
+
 import { motion } from "framer-motion";
+
 import Link from "next/link";
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 10 },
+
   visible,
 };
 
@@ -34,7 +40,9 @@ export default function Home() {
           alt="logo"
         />
       </motion.div>
+
       <HeroPattern className="absolute bottom-1/2 left-1/2 top-1/2 -z-40 w-full -translate-x-1/2 -translate-y-1/2" />
+
       <Link
         href="https://t.me/cangastips"
         target="_blank"
@@ -46,6 +54,7 @@ export default function Home() {
       <motion.h1
         variants={{
           hidden: { opacity: 0, y: -20 },
+
           visible,
         }}
         className="mt-36 text-3xl font-extrabold leading-tight tracking-tight text-zinc-300"
@@ -57,7 +66,6 @@ export default function Home() {
         variants={itemVariants}
         className="px-4 text-center text-lg font-normal leading-7 tracking-tight text-zinc-400"
       >
-        /* eslint-disable prettier/prettier */
         <Balance>
           Somos especialistas em análise do mercado esportivo, com foco em{" "}
           <strong>FIFA e NBA2K</strong> . Temos uma <strong>IA</strong> que
@@ -65,7 +73,6 @@ export default function Home() {
           apostas na <strong>BET</strong>, oferecendo um serviço autônomo e
           independente para uma experiência confiável e única.
         </Balance>
-        /* eslint-enable prettier/prettier */
       </motion.p>
 
       <div className="flex max-w-96 flex-col gap-4">
@@ -94,6 +101,7 @@ export default function Home() {
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
+
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
@@ -106,6 +114,7 @@ export default function Home() {
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
+
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
@@ -117,14 +126,17 @@ export default function Home() {
             className="bg-cangas-blue"
           />
         </motion.div>
+
         <motion.div variants={itemVariants}>
           <AnalyticsButton
             textButton="CangasTips Pro (Apostas automáticas)"
             // target="_blank"
+
             route={`/`}
             className=" cursor-default bg-gradient-to-r from-cangas-green to-cangas-blue opacity-50"
           />
         </motion.div>
+
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
@@ -137,6 +149,7 @@ export default function Home() {
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
+
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
