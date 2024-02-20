@@ -1,4 +1,4 @@
-'use client'
+"use client";
 /* eslint-disable prettier/prettier */
 import { TrendingUp } from "lucide-react";
 
@@ -134,11 +134,11 @@ export function CardLiveFifaH2h({
             </span>
           </h1>
 
-          <span className="text-lg sm:text-xl/5 text-rose-500">
+          <span className="text-lg text-rose-500 sm:text-xl/5">
             {dataH2hStats?.game_mutual_information?.jogadorB_name}
           </span>
           <span />
-          <span className="text-lg sm:text-xl/5 text-purple-500">
+          <span className="text-lg text-purple-500 sm:text-xl/5">
             {dataH2hStats?.game_mutual_information?.jogadorA_name}
           </span>
 
@@ -146,13 +146,13 @@ export function CardLiveFifaH2h({
           <span>Empates</span>
           <span>Vitórias</span>
 
-          <span className="text-xl sm:text-3xl/5 text-rose-500">
+          <span className="text-xl text-rose-500 sm:text-3xl/5">
             {dataH2hStats?.total_info?.game_mutual_information?.jogadorB_wins}
           </span>
           <span className="text-xl sm:text-3xl/5">
             {dataH2hStats?.total_info?.game_mutual_information?.draw_numbers}
           </span>
-          <span className="text-xl sm:text-3xl/5 text-purple-500">
+          <span className="text-xl text-purple-500 sm:text-3xl/5">
             {dataH2hStats?.total_info?.game_mutual_information?.jogadorA_wins}
           </span>
 

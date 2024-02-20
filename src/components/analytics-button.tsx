@@ -1,18 +1,18 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
+import Link from "next/link";
 
 interface AnalyticsButtonProps {
-  className?: string
-  target?: string
-  textButton: string
-  route: string
+  className?: string;
+  target?: string;
+  textButton: string;
+  route: string;
 }
 
 // type AnalyticsButtonDivProps = ComponentProps<'div'>
 
 export function AnalyticsButton({
-  className = 'bg-cangas-green',
+  className = "bg-cangas-green",
   target,
   textButton,
   route,
@@ -27,5 +27,5 @@ export function AnalyticsButton({
     >
       {textButton}
     </Link>
-  )
+  );
 }

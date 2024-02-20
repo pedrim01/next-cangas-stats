@@ -1,10 +1,10 @@
-import Home from '@/components/home'
-import { Metadata } from 'next'
+import Home from "@/components/home";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Home',
-}
+  title: "Home",
+};
 
 export default function Live() {
-  return <Home />
+  return <Home />;
 }

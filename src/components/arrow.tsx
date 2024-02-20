@@ -1,6 +1,6 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from "lucide-react";
 interface ArrowProps {
-  className?: string
+  className?: string;
 }
 export function Arrow({ className }: ArrowProps) {
   return (
@@ -12,5 +12,5 @@ export function Arrow({ className }: ArrowProps) {
       />
       <ArrowRight className={`text-zinc-700 `} />
     </div>
-  )
+  );
 }

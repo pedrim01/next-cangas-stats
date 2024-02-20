@@ -1,22 +1,22 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
 
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { TanstackProvider } from '@/components/TanstackProvider'
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { TanstackProvider } from "@/components/TanstackProvider";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Cangas Tips',
-    default: 'Cangas Tips',
+    template: "%s | Cangas Tips",
+    default: "Cangas Tips",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html className={inter.variable} lang="pt">
@@ -24,5 +24,5 @@ export default function RootLayout({
         <TanstackProvider>{children}</TanstackProvider>
       </body>
     </html>
-  )
+  );
 }

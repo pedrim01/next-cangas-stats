@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { apiAxios } from "@/data/axiosCreates";
 
-export const dynamic = 'force-dynamic' // defaults to auto
+export const dynamic = "force-dynamic"; // defaults to auto
 
 export async function GET() {
   const response = await apiAxios.get(

@@ -1,10 +1,10 @@
-import { CardLiveFifa } from '@/components/card-live-fifa'
+import { CardLiveFifa } from "@/components/card-live-fifa";
 
-import { Metadata } from 'next'
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Ao Vivo',
-}
+  title: "Ao Vivo",
+};
 
 export default async function LiveFifa() {
   // await new Promise((resolve) => setTimeout(resolve, 3000))
@@ -16,5 +16,5 @@ export default async function LiveFifa() {
       </h1>
       <CardLiveFifa />
     </div>
-  )
+  );
 }

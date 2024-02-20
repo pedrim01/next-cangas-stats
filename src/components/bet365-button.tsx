@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 export function Bet365Button() {
   return (
@@ -9,5 +9,5 @@ export function Bet365Button() {
       <span className="text-bet365-white">BET</span>
       <span className="text-bet365-yellow">365</span>
     </button>
-  )
+  );
 }

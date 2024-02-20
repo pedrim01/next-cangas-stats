@@ -1,20 +1,20 @@
-'use client'
-import Image from 'next/image'
-import { TbMessageCircle2Filled } from 'react-icons/tb'
+"use client";
+import Image from "next/image";
+import { TbMessageCircle2Filled } from "react-icons/tb";
 
-import Balance from 'react-wrap-balancer'
-import { HeroPattern } from '@/components/HeroPattern'
+import Balance from "react-wrap-balancer";
+import { HeroPattern } from "@/components/HeroPattern";
 
-import { AnalyticsButton } from '@/components/analytics-button'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { AnalyticsButton } from "@/components/analytics-button";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } }
+const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 10 },
   visible,
-}
+};
 
 export default function Home() {
   return (
@@ -57,13 +57,15 @@ export default function Home() {
         variants={itemVariants}
         className="px-4 text-center text-lg font-normal leading-7 tracking-tight text-zinc-400"
       >
+        /* eslint-disable prettier/prettier */
         <Balance>
-          Somos especialistas em análise do mercado esportivo, com foco em{' '}
+          Somos especialistas em análise do mercado esportivo, com foco em{" "}
           <strong>FIFA e NBA2K</strong> . Temos uma <strong>IA</strong> que
-          realiza as análises do mercado, envia tips e executa
-          automaticamente apostas na <strong>BET</strong>, oferecendo um serviço
-          autônomo e independente para uma experiência confiável e única.
+          realiza as análises do mercado, envia tips e executa automaticamente
+          apostas na <strong>BET</strong>, oferecendo um serviço autônomo e
+          independente para uma experiência confiável e única.
         </Balance>
+        /* eslint-enable prettier/prettier */
       </motion.p>
 
       <div className="flex max-w-96 flex-col gap-4">
@@ -149,5 +151,5 @@ export default function Home() {
         </motion.div>
       </div>
     </motion.main>
-  )
+  );
 }

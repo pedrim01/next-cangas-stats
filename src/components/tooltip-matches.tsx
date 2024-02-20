@@ -1,20 +1,20 @@
-import * as Tooltip from '@radix-ui/react-tooltip'
-import { StarFilledIcon } from '@radix-ui/react-icons'
+import * as Tooltip from "@radix-ui/react-tooltip";
+import { StarFilledIcon } from "@radix-ui/react-icons";
 
 interface TooltipMatchesProps {
-  name?: string
+  name?: string;
   dataMatch?: {
-    home_player?: string
-    away_player?: string
-    winner_name?: string
-    score?: string
-    timestamp?: number
-    dateConverted?: string
-  }
-  player1?: string
-  player2?: string
-  icon?: React.ReactNode
-  content?: string
+    home_player?: string;
+    away_player?: string;
+    winner_name?: string;
+    score?: string;
+    timestamp?: number;
+    dateConverted?: string;
+  };
+  player1?: string;
+  player2?: string;
+  icon?: React.ReactNode;
+  content?: string;
 }
 
 export function TooltipRoot({ icon, content }: TooltipMatchesProps) {
@@ -34,7 +34,7 @@ export function TooltipRoot({ icon, content }: TooltipMatchesProps) {
         </Tooltip.Portal>
       </Tooltip.Root>
     </Tooltip.Provider>
-  )
+  );
 }
 
 export function TooltipMatches({ name, dataMatch }: TooltipMatchesProps) {
@@ -42,16 +42,16 @@ export function TooltipMatches({ name, dataMatch }: TooltipMatchesProps) {
     textColor:
       dataMatch?.winner_name === name?.toLowerCase()
         ? `text-green-800`
-        : dataMatch?.winner_name === 'draw'
+        : dataMatch?.winner_name === "draw"
           ? `text-gray-500`
           : `text-red-800`,
     bgColor:
       dataMatch?.winner_name === name?.toLowerCase()
         ? `bg-green-800`
-        : dataMatch?.winner_name === 'draw'
+        : dataMatch?.winner_name === "draw"
           ? `bg-gray-500`
           : `bg-red-800`,
-  }
+  };
   return (
     <Tooltip.Provider delayDuration={10}>
       <Tooltip.Root>
@@ -68,7 +68,7 @@ export function TooltipMatches({ name, dataMatch }: TooltipMatchesProps) {
             <div className="flex flex-col items-center justify-center gap-2">
               <span className="col-span-3"> {dataMatch?.dateConverted}</span>
               <span className="justify-self-end">
-                {dataMatch?.home_player} {dataMatch?.score}{' '}
+                {dataMatch?.home_player} {dataMatch?.score}{" "}
                 {dataMatch?.away_player}
               </span>
             </div>
@@ -78,24 +78,24 @@ export function TooltipMatches({ name, dataMatch }: TooltipMatchesProps) {
         </Tooltip.Portal>
       </Tooltip.Root>
     </Tooltip.Provider>
-  )
+  );
 }
 
 export function TooltipMatchesH2h({ player1, dataMatch }: TooltipMatchesProps) {
   const colorStateMatch = {
     textColor:
       dataMatch?.winner_name === player1?.toLowerCase()
-        ? 'text-rose-800'
-        : dataMatch?.winner_name === 'draw'
-          ? 'text-gray-500'
-          : 'text-purple-800',
+        ? "text-rose-800"
+        : dataMatch?.winner_name === "draw"
+          ? "text-gray-500"
+          : "text-purple-800",
     bgColor:
       dataMatch?.winner_name === player1?.toLowerCase()
-        ? 'bg-rose-800'
-        : dataMatch?.winner_name === 'draw'
-          ? 'bg-gray-500'
-          : 'bg-purple-800',
-  }
+        ? "bg-rose-800"
+        : dataMatch?.winner_name === "draw"
+          ? "bg-gray-500"
+          : "bg-purple-800",
+  };
   return (
     <Tooltip.Provider delayDuration={10}>
       <Tooltip.Root>
@@ -112,7 +112,7 @@ export function TooltipMatchesH2h({ player1, dataMatch }: TooltipMatchesProps) {
             <div className="flex flex-col items-center justify-center gap-2">
               <span className="col-span-3"> {dataMatch?.dateConverted}</span>
               <span className="justify-self-end">
-                {dataMatch?.home_player} {dataMatch?.score}{' '}
+                {dataMatch?.home_player} {dataMatch?.score}{" "}
                 {dataMatch?.away_player}
               </span>
             </div>
@@ -122,5 +122,5 @@ export function TooltipMatchesH2h({ player1, dataMatch }: TooltipMatchesProps) {
         </Tooltip.Portal>
       </Tooltip.Root>
     </Tooltip.Provider>
-  )
+  );
 }
