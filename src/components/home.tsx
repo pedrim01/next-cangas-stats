@@ -32,13 +32,7 @@ export default function Home() {
       className="relative flex  flex-col items-center justify-center gap-8 pt-2 sm:gap-3"
     >
       <motion.div variants={itemVariants} className="absolute top-0">
-        <Image
-          src="/logo.png"
-          width={150}
-          height={150}
-          quality={100}
-          alt="logo"
-        />
+        <Image src="/logo.png" width={150} height={150} quality={100} alt="logo" />
       </motion.div>
 
       <HeroPattern className="absolute bottom-1/2 left-1/2 top-1/2 -z-40 w-full -translate-x-1/2 -translate-y-1/2" />
@@ -67,20 +61,14 @@ export default function Home() {
         className="px-4 text-center text-lg font-normal leading-7 tracking-tight text-zinc-400"
       >
         <Balance>
-          Somos especialistas em análise do mercado esportivo, com foco em{" "}
-          <strong>FIFA e NBA2K</strong> . Temos uma <strong>IA</strong> que
-          realiza as análises do mercado, envia tips e executa automaticamente
-          apostas na <strong>BET</strong>, oferecendo um serviço autônomo e
-          independente para uma experiência confiável e única.
+          Somos especialistas em análise do mercado esportivo, com foco em <strong>FIFA e NBA2K</strong> . Temos uma{" "}
+          <strong>IA</strong> que realiza as análises do mercado, envia tips e executa automaticamente apostas na{" "}
+          <strong>BET</strong>, oferecendo um serviço autônomo e independente para uma experiência confiável e única.
         </Balance>
       </motion.p>
 
       <div className="flex max-w-96 flex-col gap-4">
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
             textButton="Grupo FREE"
             target="_blank"
@@ -89,11 +77,7 @@ export default function Home() {
           />
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
             textButton="Grupo Select (FiFA + NBA2K)"
             target="_blank"
@@ -102,11 +86,7 @@ export default function Home() {
           />
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
             textButton="Planilha de resultados (VIP)"
             target="_blank"
@@ -115,16 +95,8 @@ export default function Home() {
           />
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
-          <AnalyticsButton
-            textButton="Analisar FIFA ao vivo"
-            route={`/fifa`}
-            className="bg-cangas-blue"
-          />
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+          <AnalyticsButton textButton="Analisar FIFA ao vivo" route={`/fifa`} className="bg-cangas-blue" />
         </motion.div>
 
         <motion.div variants={itemVariants}>
@@ -137,11 +109,7 @@ export default function Home() {
           />
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
             textButton="Serviço Broker"
             target="_blank"
@@ -150,11 +118,7 @@ export default function Home() {
           />
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
             textButton="Planilha de resultados (Broker)"
             target="_blank"
