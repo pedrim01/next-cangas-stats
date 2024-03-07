@@ -29,7 +29,7 @@ export default function Home() {
       animate="visible"
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-      className="relative flex  flex-col items-center justify-center gap-8 pt-2 sm:gap-3"
+      className="relative flex  flex-col items-center justify-center gap-8 pb-4 pt-2 sm:gap-3"
     >
       <motion.div variants={itemVariants} className="absolute top-0">
         <Image src="/logo.png" width={150} height={150} quality={100} alt="logo" />
@@ -69,6 +69,10 @@ export default function Home() {
 
       <div className="flex max-w-96 flex-col gap-4">
         <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+          <AnalyticsButton textButton="Analisar FIFA ao vivo" route={`/fifa`} className="bg-cangas-blue" />
+        </motion.div>
+
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
             textButton="Grupo FREE"
             target="_blank"
@@ -79,9 +83,18 @@ export default function Home() {
 
         <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
-            textButton="Grupo Select (FiFA + NBA2K)"
+            textButton="Grupo Select"
             target="_blank"
             route={`https://lastlink.com/p/C3FCBB41B`}
+            className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
+          />
+        </motion.div>
+
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+          <AnalyticsButton
+            textButton="Grupo Select (sem Handicap)"
+            target="_blank"
+            route={`https://lastlink.com/p/C2263685C/`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
@@ -95,11 +108,9 @@ export default function Home() {
           />
         </motion.div>
 
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-          <AnalyticsButton textButton="Analisar FIFA ao vivo" route={`/fifa`} className="bg-cangas-blue" />
-        </motion.div>
+        
 
-        <motion.div variants={itemVariants}>
+        {/* <motion.div variants={itemVariants}>
           <AnalyticsButton
             textButton="CangasTips Pro (Apostas automáticas)"
             // target="_blank"
@@ -107,7 +118,7 @@ export default function Home() {
             route={`/`}
             className=" cursor-default bg-gradient-to-r from-cangas-green to-cangas-blue opacity-50"
           />
-        </motion.div>
+        </motion.div> */}
 
         <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
@@ -118,14 +129,14 @@ export default function Home() {
           />
         </motion.div>
 
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+        {/* <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
             textButton="Planilha de resultados (Broker)"
             target="_blank"
             route={`https://docs.google.com/spreadsheets/d/149qEVZWFYA_UMUCZ9qmK7k1gPkMEtoEmBME1vL1HOps/edit#gid=0`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.main>
   );

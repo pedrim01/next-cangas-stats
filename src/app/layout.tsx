@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html className={inter.variable} lang="pt">
-      <body className="bg-gradient-to-tr from-zinc-950 to-gray-900  text-zinc-300  antialiased ">
+      <body className="bg-gradient-to-tr from-zinc-950 to-gray-900  text-zinc-300  antialiased min-h-screen">
         <TanstackProvider>{children}</TanstackProvider>
       </body>
     </html>
