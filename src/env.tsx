@@ -1,4 +1,4 @@
-/* eslint-disable prettier/prettier */
+
 import { z } from "zod";
 
 const envSchema = z.object({

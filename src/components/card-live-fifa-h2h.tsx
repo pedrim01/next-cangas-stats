@@ -1,5 +1,5 @@
 "use client";
-/* eslint-disable prettier/prettier */
+
 import { TrendingUp } from "lucide-react";
 
 import { useQuery } from "react-query";
