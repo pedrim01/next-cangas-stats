@@ -98,14 +98,14 @@ export default function Home() {
           />
         </motion.div>
 
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+        {/* <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
             textButton="Grupo Select (sem Handicap)"
             target="_blank"
             route={`https://lastlink.com/p/C2263685C/`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
-        </motion.div>
+        </motion.div> */}
 
         <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
