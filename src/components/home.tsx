@@ -80,6 +80,14 @@ export default function Home() {
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
+        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+          <AnalyticsButton
+            textButton="Grupo Futebol"
+            target="_blank"
+            route={`https://lastlink.com/p/C5EE5D617/checkout-payment/`}
+            className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
+          />
+        </motion.div>
 
         <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
