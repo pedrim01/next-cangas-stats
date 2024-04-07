@@ -69,7 +69,7 @@ export default function Home() {
 
       <div className="flex max-w-96 flex-col gap-4">
         <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-          <AnalyticsButton textButton="Analisar FIFA ao vivo" route={`/fifa`} className="bg-cangas-blue" />
+          <AnalyticsButton textButton="Analisar FIFA ao vivo" route={`/fifa`} className="bg-gradient-to-l from-cangas-green to-cangas-blue" />
         </motion.div>
 
         <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
@@ -77,7 +77,7 @@ export default function Home() {
             textButton="Grupo FREE"
             target="_blank"
             route={`https://t.me/bet365fifafree`}
-            className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
+            className="bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
         <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
@@ -91,7 +91,7 @@ export default function Home() {
 
         <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <AnalyticsButton
-            textButton="Grupo Select"
+            textButton="Grupo FIFA + NBA2K"
             target="_blank"
             route={`https://lastlink.com/p/C3FCBB41B`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
