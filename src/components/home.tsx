@@ -32,13 +32,19 @@ export default function Home() {
       className="relative flex  flex-col items-center justify-center gap-8 pb-4 pt-2 sm:gap-3"
     >
       <motion.div variants={itemVariants} className="absolute top-0">
-        <Image src="/logo.png" width={150} height={150} quality={100} alt="logo" />
+        <Image
+          src="/logo.png"
+          width={150}
+          height={150}
+          quality={100}
+          alt="logo"
+        />
       </motion.div>
 
       <HeroPattern className="absolute bottom-1/2 left-1/2 top-1/2 -z-40 w-full -translate-x-1/2 -translate-y-1/2" />
 
       <Link
-        href="https://t.me/cangastips"
+        href="https://api.whatsapp.com/send?phone=553898388179&text=Ol%C3%A1,%20venho%20atrav%C3%A9s%20do%20site%20da%20CangasTips!"
         target="_blank"
         className="z-100 fixed bottom-4 right-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-tl from-cangas-green to-zinc-950 hover:text-zinc-50 "
       >
@@ -61,90 +67,98 @@ export default function Home() {
         className="px-4 text-center text-lg font-normal leading-7 tracking-tight text-zinc-400"
       >
         <Balance>
-          Somos especialistas em análise do mercado esportivo, com foco em <strong>FIFA e NBA2K</strong> . Temos uma{" "}
-          <strong>IA</strong> que realiza as análises do mercado, envia tips e executa automaticamente apostas na{" "}
-          <strong>BET</strong>, oferecendo um serviço autônomo e independente para uma experiência confiável e única.
+          Temos uma <strong>IA</strong> que realiza as análises de todos os
+          mercados esportivos da <strong>BET365</strong> e executa
+          automaticamente as entradas. Oferecendo um serviço autônomo e
+          independente para uma experiência confiável e única. Chega de perder
+          dinheiro pra <strong>BET</strong> e vem lucrar com a{" "}
+          <strong>Cangas Investimentos.</strong>
         </Balance>
+        {/* Somos especialistas em análise do mercado esportivo,
+          com foco em <strong>FIFA e NBA2K</strong> . Temos uma{" "}
+          <strong>IA</strong> que realiza as análises do mercado, envia tips e
+          executa automaticamente apostas na <strong>BET</strong>, oferecendo um
+          serviço autônomo e independente para uma experiência confiável e
+          única. */}
       </motion.p>
 
       <div className="flex max-w-96 flex-col gap-4">
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-          <AnalyticsButton textButton="Analisar FIFA ao vivo" route={`/fifa`} className="bg-gradient-to-l from-cangas-green to-cangas-blue" />
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+        >
+          <AnalyticsButton
+            textButton="Sobre o Software Automático"
+            target="_blank"
+            route={``}
+            className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
+          />
         </motion.div>
 
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+        >
           <AnalyticsButton
-            textButton="Grupo FREE"
+            textButton="Sobre o Broker"
             target="_blank"
-            route={`https://t.me/bet365fifafree`}
+            route={``}
             className="bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+        >
           <AnalyticsButton
-            textButton="Grupo Futebol"
+            textButton="Contratar Software"
             target="_blank"
-            route={`https://lastlink.com/p/C5EE5D617/checkout-payment/`}
+            route={``}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
 
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+        >
           <AnalyticsButton
-            textButton="Grupo FIFA + NBA2K"
+            textButton="Contratar Broker"
             target="_blank"
-            route={`https://lastlink.com/p/C3FCBB41B`}
+            route={``}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
 
-        {/* <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+        >
           <AnalyticsButton
-            textButton="Grupo Select (sem Handicap)"
+            textButton="Planilha de resultados Software"
             target="_blank"
-            route={`https://lastlink.com/p/C2263685C/`}
-            className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
-          />
-        </motion.div> */}
-
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-          <AnalyticsButton
-            textButton="Planilha de resultados (VIP)"
-            target="_blank"
-            route={`https://docs.google.com/spreadsheets/d/1JcvFYtjFEmA4oi_X1Vi50VEled3JYX5spj5q_hPYvWM/edit#gid=12892773`}
+            route={``}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
 
-        
-
-        {/* <motion.div variants={itemVariants}>
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+        >
           <AnalyticsButton
-            textButton="CangasTips Pro (Apostas automáticas)"
-            // target="_blank"
-
-            route={`/`}
-            className=" cursor-default bg-gradient-to-r from-cangas-green to-cangas-blue opacity-50"
-          />
-        </motion.div> */}
-
-        <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-          <AnalyticsButton
-            textButton="Serviço Broker"
+            textButton="Planilha de resultados Broker"
             target="_blank"
-            route={`https://api.whatsapp.com/send/?phone=%2B5538998388179&text&type=phone_number&app_absent=0`}
+            route={``}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
-
-        {/* <motion.div variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-          <AnalyticsButton
-            textButton="Planilha de resultados (Broker)"
-            target="_blank"
-            route={`https://docs.google.com/spreadsheets/d/149qEVZWFYA_UMUCZ9qmK7k1gPkMEtoEmBME1vL1HOps/edit#gid=0`}
-            className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
-          />
-        </motion.div> */}
       </div>
     </motion.main>
   );
