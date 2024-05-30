@@ -116,7 +116,7 @@ export default function Home() {
           <AnalyticsButton
             textButton="Contratar Software"
             target="_blank"
-            route={``}
+            route={`https://api.whatsapp.com/send?phone=553898388179&text=Ol%C3%A1,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Software!`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
