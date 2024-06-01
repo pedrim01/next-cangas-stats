@@ -91,7 +91,7 @@ export default function Home() {
           <AnalyticsButton
             textButton="Sobre o Software Automático"
             target="_blank"
-            route={``}
+            route={`https://cangastips.my.canva.site/site-sobre-software`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
@@ -140,7 +140,20 @@ export default function Home() {
           whileTap={{ scale: 0.8 }}
         >
           <AnalyticsButton
-            textButton="Planilha de resultados Software"
+            textButton="Resultados Software"
+            target="_blank"
+            route={`https://cangastips.my.canva.site/resultados-software`}
+            className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
+          />
+        </motion.div>
+
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+        >
+          <AnalyticsButton
+            textButton="Resultados Broker"
             target="_blank"
             route={``}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
@@ -153,9 +166,9 @@ export default function Home() {
           whileTap={{ scale: 0.8 }}
         >
           <AnalyticsButton
-            textButton="Planilha de resultados Broker"
+            textButton="Automação Personalizada"
             target="_blank"
-            route={``}
+            route={`https://api.whatsapp.com/send?phone=5538999052894&text=Ol%C3%A1%20Dev,%20tenho%20interesse%20em%20ter%20minha%20pr%C3%B3pria%20automa%C3%A7%C3%A3o%20de%20apostas!`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
