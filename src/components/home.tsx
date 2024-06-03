@@ -155,12 +155,12 @@ export default function Home() {
           <AnalyticsButton
             textButton="Resultados Broker"
             target="_blank"
-            route={``}
+            route={`https://cangastips.my.canva.site/cangas-investimentos-resultados-broker`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.8 }}
@@ -171,7 +171,7 @@ export default function Home() {
             route={`https://api.whatsapp.com/send?phone=5538999052894&text=Ol%C3%A1%20Dev,%20tenho%20interesse%20em%20ter%20minha%20pr%C3%B3pria%20automa%C3%A7%C3%A3o%20de%20apostas!`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.main>
   );
