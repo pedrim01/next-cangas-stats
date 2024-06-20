@@ -129,7 +129,7 @@ export default function Home() {
           <AnalyticsButton
             textButton="Contratar Broker"
             target="_blank"
-            route={``}
+            route={`https://api.whatsapp.com/send?phone=5531984136827&text=Ol%C3%A1,%20Gostaria%20de%20saber%20mais%20sobre%20o%20Broker`}
             className=" bg-gradient-to-r from-cangas-green to-cangas-blue"
           />
         </motion.div>
