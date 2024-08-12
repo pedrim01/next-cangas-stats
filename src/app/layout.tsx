@@ -22,9 +22,9 @@ export default function RootLayout({
   return (
 
     <html className={inter.variable} lang="pt">
-      <Head>
+      {/* <Head>
         <meta name="ga-site-verification" content="D88Nm96fu9qUmmTMLZJP8OqK" />
-      </Head>
+      </Head> */}
       <body className="bg-gradient-to-tr from-zinc-950 to-gray-900  text-zinc-300  antialiased min-h-screen">
         <TanstackProvider>{children}</TanstackProvider>
       </body>
